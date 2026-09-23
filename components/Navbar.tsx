@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+import { usePathname } from "next/navigation";
 
 import "@/app/globals.css";
 import "@/styles/components/Navbar.css";
@@ -9,7 +13,16 @@ import logoDev from "@/public/images/icons/logo_dev.svg";
 import profilePic from "@/public/images/portraits/me.jpg";
 import menuIcon from "@/public/images/icons/menu.svg";
 
+const routes = [
+  { name: "HOME", path: "/" },
+  { name: "ABOUT", path: "/about" },
+  { name: "EXPERIENCE", path: "/experience" },
+  { name: "PROJECTS", path: "/projects" },
+];
+
 export const Navbar: React.FC = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="navbar">
       <div className="icon">
@@ -18,12 +31,23 @@ export const Navbar: React.FC = () => {
       </div>
 
       <div className="buttons">
-        <Link href="/">HOME</Link>
-        <Link href="/about">ABOUT</Link>
-        <Link href="/experience" className="active">
-          EXPERIENCE
-        </Link>
-        <Link href="/projects">PROJECTS</Link>
+        {routes.map((route) => {
+          const isActive =
+            route.path === "/"
+              ? pathname === "/"
+              : pathname === route.path ||
+                pathname.endsWith(`/${route.name.toLowerCase()}`);
+
+          return (
+            <Link
+              key={route.name}
+              href={route.path}
+              className={isActive ? "active" : ""}
+            >
+              {route.name}
+            </Link>
+          );
+        })}
 
         <a
           className="profile-icon"
