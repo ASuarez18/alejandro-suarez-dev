@@ -1,0 +1,282 @@
+header {
+  padding: 25px;
+}
+h1 {
+    font-family: var(--font-impact);
+    font-size: 3rem;
+    color: var(--text-color);
+  }
+h1 span {
+  color: var(--primary-color);
+}
+header p {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 0 25px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+/* > Professional Journey */
+.professional-journey{
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.professional-journey h2 {
+  font-family: var(--font-primary);
+  font-size: 1.7rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.professional-journey img:first-child {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.professional-journey .experience {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience .experience-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.experience-item .time-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.time-line .circle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--tertiary-color);
+  border-radius: 50%;
+}
+
+.time-line .line {
+  width: 2px;
+  height: 100%;
+  background-color: var(--tertiary-color);
+}
+
+.current {
+  background-color: var(--primary-color) !important;
+}
+
+.experience-data {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.experience-data .dates {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color-tertiary);
+}
+
+.experience-data .job-position {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.experience-data .company {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--text-color-secondary);
+  font-weight: 400;
+}
+
+.experience-data .job-description {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--text-color-tertiary);
+}
+
+/* > Skills and education  */
+.skills-education {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0 50px;
+  width: 35%;
+  gap: 20px;
+}
+
+.skills-education .technical-skills, .skills-education .soft-skills, .skills-education .education {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skills-education h2 {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-education h2 img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.technical-skills .tech-skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-skill-item .tech-skill-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tech-skill-data p:not(.percentage) {
+  font-family: var(--font-secondary);
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+.tech-skill-data .percentage {
+  font-family: var(--font-tertiary);
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.tech-skill-item .progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.soft-skills {
+  margin-top: 0px;
+}
+
+.soft-skills .skills-list {
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  padding: 10px 30px;
+  list-style: none;
+}
+
+.skills-list li {
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+  background-color: var(--background-color);
+  outline: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+  transform: scale(105%);
+  color: #fff;
+}
+
+.skills-education .education {
+  gap: 15px;
+}
+
+
+.skills-education .education .education-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.education-item .degree {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.education-item .institution {
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+}
+
+.education-item .generation {
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.skills-education .education .education-item:hover {
+  background-color: var(--backgound-color);
+  outline: 1px solid var(--primary-color);
+  transform: scale(105%);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  header p {
+    text-align: center;
+  }
+  main {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .professional-journey, .skills-education {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+}

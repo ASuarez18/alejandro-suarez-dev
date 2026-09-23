@@ -1,0 +1,53 @@
+/* ========================================
+   REUSABLE UTILITY CLASSES
+   ======================================== */
+
+/* > Card styles */
+.card {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  outline: 2px solid var(--primary-color);
+  background-color: var(--background-color);
+  box-shadow: 0 4px 10px var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-family: var(--font-tertiary);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.card p {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  line-height: 1.4;
+}
+
+/* > Button hover effects */
+.btn-hover {
+  color: var(--text-color);
+  outline: 2px solid var(--primary-color);
+  font-weight: 500;
+  transform: scale(120%);
+  box-shadow: 0 0 15px var(--primary-color);
+}
