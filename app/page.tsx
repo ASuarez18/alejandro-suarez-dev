@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/lib/projects";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import "@/app/globals.css";
 
@@ -9,7 +10,7 @@ import codeLogo from "@/public/images/icons/code_logo.svg";
 import softSkillsLogo from "@/public/images/icons/soft-skills.svg";
 import mailIcon from "@/public/images/icons/mail.svg";
 import phoneIcon from "@/public/images/icons/phone.svg";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import ContactForm from "@/components/ContactForm";
 
 export const hardSkills: string[] = ["TypeScript", "JavaScript (ES6+)", "Next.js", "Node.js", "Express.js", "Astro", "Tailwind CSS", "PostgreSQL", "Neon Database", "MongoDB", "Prisma ORM", "Contentful CMS", "RESTful APIs", "Git & GitHub", "Docker", "Vercel", "Netlify", "Figma", "HTML5 & CSS3", "Responsive Design", "Data Structures & Algorithms"];
 const softSkills = ["Project Planning", "Prioritization", "Adaptability", "Motivational Leadership", "Active Listening", "Critical Thinking", "Clear Communication", "Team Collaboration", "Time Management", "Problem Solving", "Team Leadership", "Conflict Resolution", "Agile Methodologies", "Emotional Intelligence"]
@@ -214,46 +215,7 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* TODO: Implement  */}
-          <form className="send-message-form">
-            <div className="name-email">
-              <div className="name-input">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                  autoComplete="name"
-                />
-              </div>
-              <div className="email-input">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                  autoComplete="email"
-                />
-              </div>
-            </div>
-            <div className="message-input">
-              <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols={30}
-                rows={6 }
-                placeholder="Your message"
-              ></textarea>
-            </div>
-            <button type="submit" className="send-btn">
-              Send Message
-            </button>
-          </form>
+          <ContactForm />
         </section>
       </main>
     </>
