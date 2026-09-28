@@ -1,22 +1,24 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getProjects } from "@/lib/projects";
 
 import "@/app/globals.css";
-
-import "@/styles/pages/home.css";
 
 import meSmiling from "@/public/images/portraits/me-smiling.jpg";
 import codeLogo from "@/public/images/icons/code_logo.svg";
 import softSkillsLogo from "@/public/images/icons/soft-skills.svg";
-import weatherForecastImg from "@/public/images/media/weather-forecat.png";
-import auraArcImg from "@/public/images/media/aura-arc.png";
-import carlaBeautyImg from "@/public/images/media/carla-beauty.png";
-import openInNewIcon from "@/public/images/icons/open-in-new.svg";
 import mailIcon from "@/public/images/icons/mail.svg";
 import phoneIcon from "@/public/images/icons/phone.svg";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export default function Home() {
+export const hardSkills: string[] = ["TypeScript", "JavaScript (ES6+)", "Next.js", "Node.js", "Express.js", "Astro", "Tailwind CSS", "PostgreSQL", "Neon Database", "MongoDB", "Prisma ORM", "Contentful CMS", "RESTful APIs", "Git & GitHub", "Docker", "Vercel", "Netlify", "Figma", "HTML5 & CSS3", "Responsive Design", "Data Structures & Algorithms"];
+const softSkills = ["Project Planning", "Prioritization", "Adaptability", "Motivational Leadership", "Active Listening", "Critical Thinking", "Clear Communication", "Team Collaboration", "Time Management", "Problem Solving", "Team Leadership", "Conflict Resolution", "Agile Methodologies", "Emotional Intelligence"]
+
+
+export default async function Home() {
+  const projects = await getProjects();
+  const firstThreeProjects = projects.slice(0, 3);
+
   return (
     <>
       <header>
@@ -24,10 +26,10 @@ export default function Home() {
           <div className="available-work">
             <span className="heartbeat">•</span> Available to work
           </div>
-          <h1 className="i-am">
+          <h1 className="i-am font-semibold">
             Hi, I&apos;m <span>Alex!</span>
           </h1>
-          <p>
+          <p className="text-text-color! tracking-wide font-normal! font-secondary!">
             A Passionate Full-Stack Developer specializing in building
             high-performance web applications and exceptional digital
             experiences.
@@ -72,8 +74,8 @@ export default function Home() {
             </div>
           </div>
           <div className="about-info">
-            <h2>ABOUT ME</h2>
-            <h3>
+            <h2 className="font-semibold">ABOUT ME</h2>
+            <h3 className="font-semibold">
               Crafting scalable digital solutions with a human-centric approach
             </h3>
             <p>
@@ -93,8 +95,8 @@ export default function Home() {
         <hr />
 
         <section className="skills">
-          <h2>EXPERTISE</h2>
-          <h3>Technical Arsenal</h3>
+          <h2 className="font-semibold">EXPERTISE</h2>
+          <h3 className="font-semibold">Technical Arsenal</h3>
           <div className="skills-container">
             <div className="hard-skills">
               <h4>
@@ -102,24 +104,9 @@ export default function Home() {
                 Hard Skills
               </h4>
               <ul className="skills-list">
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>Git &amp; GitHub</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>TypeScript</li>
-                <li>Astro</li>
-                <li>Tailwind CSS</li>
-                <li>Next.js</li>
-                <li>Data Structures &amp; Algorithms</li>
-                <li>Docker</li>
-                <li>Express.js</li>
-                <li>API Rest</li>
-                <li>CRUD Operations</li>
-                <li>PostgreSQL</li>
-                <li>Jest</li>
-                <li>Supabase</li>
+                {hardSkills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
               </ul>
             </div>
             <div className="soft-skills">
@@ -133,20 +120,9 @@ export default function Home() {
                 Soft Skills
               </h4>
               <ul className="skills-list">
-                <li>Project Planning</li>
-                <li>Prioritization</li>
-                <li>Adaptability</li>
-                <li>Motivational Leadership</li>
-                <li>Active Listening</li>
-                <li>Critical Thinking</li>
-                <li>Clear Communication</li>
-                <li>Team Collaboration</li>
-                <li>Time Management</li>
-                <li>Problem Solving</li>
-                <li>Team Leadership</li>
-                <li>Conflict Resolution</li>
-                <li>Agile Methodologies</li>
-                <li>Emotional Intelligence</li>
+                {softSkills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -157,120 +133,51 @@ export default function Home() {
         <section className="featured-projects">
           <div className="projects-headline">
             <div>
-              <h2>PORTFOLIO</h2>
-              <h3>Featured Projects</h3>
+              <h2 className="font-semibold">PORTFOLIO</h2>
+              <h3 className="font-semibold">Featured Projects</h3>
             </div>
             <Link href="/projects">View All Projects -&gt;</Link>
           </div>
+
           <div className="projects-container">
-            <div className="project-card">
-              <Image
-                src={weatherForecastImg}
-                alt="Weather Forecast Project"
-                className="showcase-img"
-              />
-              <div className="project-content">
-                <ul className="project-keys">
-                  <li>Astro</li>
-                  <li>TailwindCSS</li>
-                  <li>Fetch API</li>
-                </ul>
-                <h4>Weather Forecast</h4>
-                <p>
-                  Acted as Project Captain for a collaborative weather application
-                  built with Astro and TailwindCSS. Architected the repository
-                  workflow, established global styling tokens, and integrated
-                  multiple third-party APIs (Open-Meteo and PlaceKit
-                  Autocomplete). Led the final code integration and ensured a
-                  fully responsive mobile and desktop UI.
-                </p>
-                <a
-                  href="https://weather-forecats.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit site{" "}
-                  <Image
-                    src={openInNewIcon}
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                </a>
-              </div>
-            </div>
+            {firstThreeProjects.map((project) => {
+              const fields = project.fields;
+              const imageUrl = fields.thumbnail?.fields?.file?.url 
+                ? `https:${fields.thumbnail.fields.file.url}` 
+                : "";
 
-            <div className="project-card">
-              <Image
-                src={auraArcImg}
-                alt="Aura & Arc Project"
-                className="showcase-img"
-              />
-              <div className="project-content">
-                <ul className="project-keys">
-                  <li>Astro</li>
-                  <li>Typescript</li>
-                  <li>TailwindCSS</li>
-                </ul>
-                <h4>Aura &amp; Arc</h4>
-                <p>
-                  A performance-focused product listing and detail website built
-                  individually using Astro and strict TypeScript. Leveraged
-                  Object-Oriented Programming (OOP) to abstract JSON data into
-                  robust data models, implementing custom component architecture
-                  and dynamic routing without external UI frameworks.
-                </p>
-                <a
-                  href="https://aura-arc.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit site{" "}
-                  <Image
-                    src={openInNewIcon}
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <Image
-                src={carlaBeautyImg}
-                alt="Carla Beauty Project"
-                className="showcase-img"
-              />
-              <div className="project-content">
-                <ul className="project-keys">
-                  <li>HTML5</li>
-                  <li>SCSS</li>
-                  <li>Figma</li>
-                </ul>
-                <h4>Carla Beauty</h4>
-                <p>
-                  A responsive multi-page beauty website built from a Figma
-                  mockup using semantic HTML, SCSS, and vanilla JavaScript. Led
-                  the development team, managed Git workflows, and personally
-                  drove the UI layout and styling for key pages, ensuring high
-                  design accuracy without external CSS frameworks.
-                </p>
-                <a
-                  href="https://hello-beauty.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit site{" "}
-                  <Image
-                    src={openInNewIcon}
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
-                </a>
-              </div>
-            </div>
+              return (
+                <div className="project-card" key={project.sys.id}>
+                  {imageUrl && (
+                    <Image
+                      src={imageUrl}
+                      alt={fields.title}
+                      width={500}
+                      height={300}
+                      className="showcase-img"
+                    />
+                  )}
+                  <div className="project-content">
+                    <ul className="project-keys">
+                      {fields.technologies?.map((tech, i) => (
+                        <li key={i}>{tech}</li>
+                      ))}
+                    </ul>
+                    <h4>{fields.title}</h4>
+                    <div className="project-desc">
+                      {documentToReactComponents(fields.description)}
+                    </div>
+                    <a
+                      href={fields.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit site -&gt;
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
@@ -278,8 +185,8 @@ export default function Home() {
 
         <section className="connect" id="connect">
           <div className="connect-info">
-            <h2>CONNECT</h2>
-            <h3>Let&apos;s work together</h3>
+            <h2 className="font-semibold">CONNECT</h2>
+            <h3 className="font-semibold">Let&apos;s work together</h3>
             <p>
               I&apos;m always open to discussing new projects, collaboration
               opportunities, or tech-related conversations. If you have an
@@ -307,6 +214,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* TODO: Implement  */}
           <form className="send-message-form">
             <div className="name-email">
               <div className="name-input">
@@ -338,7 +246,7 @@ export default function Home() {
                 name="message"
                 id="message"
                 cols={30}
-                rows={10}
+                rows={6 }
                 placeholder="Your message"
               ></textarea>
             </div>

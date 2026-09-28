@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Aldrich, Fira_Code, Tektur, Tourney } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
+import "@/styles/pages/home.css";
+import "@/styles/pages/projects.css";
+import "@/styles/pages/experience.css";
+import "@/styles/pages/about.css";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

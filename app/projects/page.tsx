@@ -2,9 +2,6 @@ import React from "react";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-import "@/app/globals.css";
-import "@/styles/pages/projects.css";
-
 import weatherForecastImg from "@/public/images/media/weather-forecat.png";
 import auraArcImg from "@/public/images/media/aura-arc.png";
 import carlaBeautyImg from "@/public/images/media/carla-beauty.png";

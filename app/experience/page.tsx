@@ -2,9 +2,6 @@ import React from "react";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-import "@/app/globals.css";
-import "@/styles/pages/experience.css";
-
 import suitcaseIcon from "@/public/images/icons/suitcase-icon.svg";
 import terminalIcon from "@/public/images/icons/terminal-icon.svg";
 import cognitionIcon from "@/public/images/icons/cognition-icon.svg";

@@ -2,9 +2,6 @@ import React from "react";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-import "@/app/globals.css";
-import "@/styles/pages/about.css";
-
 import bulbIcon from "@/public/images/icons/bulb-icon.svg";
 import heartIcon from "@/public/images/icons/heart-icon.svg";
 import wandIcon from "@/public/images/icons/wand-icon.svg";
