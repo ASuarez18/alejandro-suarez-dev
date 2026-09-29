@@ -16,13 +16,60 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const values = [
+    {
+      icon: bulbIcon,
+      alt: "Lightbulb Icon",
+      title: "Clarity First",
+      description:
+        "Design should simplify, not complicate. I strive for clarity in every interface and communication.",
+    },
+    {
+      icon: heartIcon,
+      alt: "Heart Icon",
+      title: "Empathy Always",
+      description:
+        "Understanding the user's struggle is the first step toward creating a meaningful solution.",
+    },
+    {
+      icon: wandIcon,
+      alt: "Magic Wand Icon",
+      title: "Continuous Growth",
+      description:
+        "The digital landscape never stops evolving, and neither do I. Learning is a daily practice.",
+    },
+  ];
+
+  const hobbies = [
+    {
+      icon: videogameIcon,
+      alt: "Videogame Icon",
+      title: "Gaming Enthusiast",
+      description:
+        "I find inspiration in the immersive worlds of video games, where storytelling and interactivity converge.",
+    },
+    {
+      icon: musicIcon,
+      alt: "Music Icon",
+      title: "Music Enjoyer",
+      description:
+        "Music is my creative fuel, whether I'm exploring new genres or attending live concerts to experience the energy of a shared moment.",
+    },
+    {
+      icon: bookIcon,
+      alt: "Book Icon",
+      title: "Avid Reader",
+      description:
+        "From design theory to science fiction, reading expands my perspective and sparks new ideas that I bring into my work.",
+    },
+  ];
   return (
     <>
-      <header>
-        <h1>
+      <header className="flex! flex-col! items-start justify-center text-center">
+        <h1 className="font-semibold">
           About <span>Me</span>
         </h1>
-        <p>Designer, Developer &amp; Lifelong Learner</p>
+        <p className="pt-0!">Designer, Developer &amp; Lifelong Learner</p>
       </header>
 
       <main>
@@ -37,128 +84,61 @@ export default function About() {
 
         <p className="about-p">
           Currently, I focus on building digital experiences that bridge the gap
-          between complex technology and human emotion. Whether it&apos;s crafting a
-          comprehensive brand identity or architecting a user-centric SaaS
-          platform, my approach remains the same: listen deeply, prototype
+          between complex technology and human emotion. Whether it&apos;s
+          crafting a comprehensive brand identity or architecting a user-centric
+          SaaS platform, my approach remains the same: listen deeply, prototype
           quickly, and refine obsessively.
         </p>
 
         <hr />
 
-        <section className="values">
-          <h2>Values &amp; Philosophy</h2>
+        <section className="values py-6.25!">
+          <h2 className="font-semibold">Values &amp; Philosophy</h2>
           <div className="values-container">
-            <div className="value-item">
-              <h3>
-                <Image
-                  src={bulbIcon}
-                  alt="Lightbulb Icon"
-                  width={24}
-                  height={24}
-                />
-                Clarity First
-              </h3>
-              <p>
-                Design should simplify, not complicate. I strive for clarity in
-                every interface and communication.
-              </p>
-            </div>
-
-            <div className="value-item">
-              <h3>
-                <Image
-                  src={heartIcon}
-                  alt="Heart Icon"
-                  width={24}
-                  height={24}
-                />
-                Empathy Always
-              </h3>
-              <p>
-                Understanding the user&apos;s struggle is the first step toward
-                creating a meaningful solution.
-              </p>
-            </div>
-
-            <div className="value-item">
-              <h3>
-                <Image
-                  src={wandIcon}
-                  alt="Magic Wand Icon"
-                  width={24}
-                  height={24}
-                />
-                Continuous Growth
-              </h3>
-              <p>
-                The digital landscape never stops evolving, and neither do I.
-                Learning is a daily practice.
-              </p>
-            </div>
+            {values.map((value, index) => (
+              <div className="value-item" key={index}>
+                <h3 className="font-medium tracking-wide">
+                  <Image
+                    src={value.icon}
+                    alt={value.alt}
+                    width={24}
+                    height={24}
+                  />
+                  {value.title}
+                </h3>
+                <p>{value.description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <hr />
 
-        <section className="hobbies">
-          <h2>Beyond the Screen</h2>
+        <section className="hobbies py-6.25!">
+          <h2 className="font-semibold">Beyond the Screen</h2>
           <div className="hobbies-container">
-            <div className="hobbie">
-              <h3>
-                <Image
-                  src={videogameIcon}
-                  alt="Videogame icon"
-                  width={24}
-                  height={24}
-                />
-                Gaming Enthusiast
-              </h3>
-              <p>
-                I find inspiration in the immersive worlds of video games, where
-                storytelling and interactivity converge.
-              </p>
-            </div>
-
-            <div className="hobbie">
-              <h3>
-                <Image
-                  src={musicIcon}
-                  alt="Music icon"
-                  width={24}
-                  height={24}
-                />
-                Music Enjoyer
-              </h3>
-              <p>
-                Music is my creative fuel, whether I&apos;m exploring new genres or
-                attending live concerts to experience the energy of a shared
-                moment.
-              </p>
-            </div>
-
-            <div className="hobbie">
-              <h3>
-                <Image
-                  src={bookIcon}
-                  alt="Book icon"
-                  width={24}
-                  height={24}
-                />
-                Avid Reader
-              </h3>
-              <p>
-                From design theory to science fiction, reading expands my
-                perspective and sparks new ideas that I bring into my work.
-              </p>
-            </div>
+            {hobbies.map((hobbie, index) => (
+              <div className="hobbie" key={index}>
+                <h3 className="font-medium tracking-wide">
+                  <Image
+                    src={hobbie.icon}
+                    alt={hobbie.alt}
+                    width={24}
+                    height={24}
+                  />
+                  {hobbie.title}
+                </h3>
+                <p>{hobbie.description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="get-in-touch">
-          <h2>Want to work together?</h2>
+          <h2 className="font-semibold text-3xl!">Want to work together?</h2>
           <p>
-            I&apos;m currently open to new projects and interesting collaborations.
-            Let&apos;s create something remarkable.
+            I&apos;m currently open to new projects and interesting
+            collaborations. Let&apos;s create something remarkable.
           </p>
           <div className="get-in-touch-buttons">
             <a
@@ -169,7 +149,7 @@ export default function About() {
               Get In Touch -&gt;
             </a>
             <a
-              href="/assets/Alejandro_Suarez.pdf"
+              href="/assets/AlejandroSuarez_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

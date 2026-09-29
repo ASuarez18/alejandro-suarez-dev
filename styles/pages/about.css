@@ -1,27 +1,27 @@
 header {
-  padding: 25px 25px 10px 25px;
+  padding: 25px 25px 10px 25px !important;
 }
 h1 {
-    font-family: var(--font-impact);
-    font-size: 3rem;
-    color: var(--text-color);
+    font-family: var(--font-impact) !important;
+    font-size: 3rem !important;
+    color: var(--text-color) !important;
   }
 h1 span {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 header p {
-  font-family: var(--font-tertiary);
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--primary-color);
+  font-family: var(--font-tertiary) !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  color: var(--primary-color) !important;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  padding: 0 25px;
-  gap: 15px;
-  margin-bottom: 60px;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 25px !important;
+  gap: 15px !important;
+  margin-bottom: 60px !important;
 }
 
 main .about-p {
@@ -32,7 +32,7 @@ main .about-p {
 }
 
 hr {
-  margin: 20px 0;
+  margin: 20px 0 !important;
 }
 
 /* > Values and hobbies sections */
@@ -52,9 +52,9 @@ section.values, section.hobbies {
 
 section.values h2,
 .hobbies h2 {
-  font-family: var(--font-primary);
-  font-size: 1.7rem;
-  color: var(--text-color);
+  font-family: var(--font-primary) !important;
+  font-size: 1.7rem !important;
+  color: var(--text-color) !important;
 }
 
 .values .values-container,
@@ -64,7 +64,7 @@ section.values h2,
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 0 50px;
+  /* padding: 0 50px; */
 }
 
 .values-container .value-item,
@@ -89,12 +89,12 @@ section.values h2,
 
 .value-item h3,
 .hobbie h3 {
-  font-family: var(--font-tertiary);
-  font-size: 1.2rem;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-family: var(--font-tertiary) !important;
+  font-size: 1.2rem !important;
+  color: var(--text-color) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
 }
 
 .value-item img,
