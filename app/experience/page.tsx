@@ -28,9 +28,9 @@ export default function Experience() {
         </p>
       </header>
 
-      <main className="flex! flex-row! items-start! justify-center!">
+      <main className="flex! lg:flex-row! items-start! justify-center!">
         <div className="professional-journey">
-          <h2 className="font-semibold!">
+          <h2 className="font-semibold! text-left!">
             <Image
               src={suitcaseIcon}
               alt="Suitcase Icon"
@@ -64,7 +64,7 @@ export default function Experience() {
 
         <div className="skills-education">
           <div className="technical-skills">
-            <h2 className="skills-headline">
+            <h2 className="skills-headline font-semibold!">
               <Image
                 src={terminalIcon}
                 alt="Terminal Icon"
@@ -77,8 +77,8 @@ export default function Experience() {
             {skillsData.map((skill, index) => (
               <div className="tech-skill-item" key={index}>
                 <div className="tech-skill-data">
-                  <p>{skill.name}</p>
-                  <p className="percentage">{skill.percentage}%</p>
+                  <p className="tracking-wide">{skill.name}</p>
+                  <p className="percentage tracking-widest">{skill.percentage}%</p>
                 </div>
                 <div className="progress-bar">
                   <div className="progress" style={{ width: `${skill.percentage}%` }}></div>
@@ -88,7 +88,7 @@ export default function Experience() {
           </div>
 
           <div className="soft-skills">
-            <h2 className="skills-headline">
+            <h2 className=" font-semibold!">
               <Image
                 src={cognitionIcon}
                 alt="Cognition Icon"
@@ -97,15 +97,15 @@ export default function Experience() {
               />
               Soft Skills
             </h2>
-            <ul className="skills-list">
+            <ul className="skills-list px-1!">
               {softSkills.map((skill, index) => (
-                <li key={index} className="skill-item">{skill}</li>
+                <li key={index} className="skill-item tracking-wide">{skill}</li>
               ))}
             </ul>
           </div>
 
           <div className="education">
-            <h2 className="skills-headline">
+            <h2 className="skills-headline font-semibold!">
               <Image
                 src={schoolIcon}
                 alt="School Icon"

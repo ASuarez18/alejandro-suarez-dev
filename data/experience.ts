@@ -53,7 +53,7 @@ export const softSkills = [
 export const educationData = [
   {
     degree: "Diploma in Web Development",
-    institution: "CICC (Canada)",
+    institution: "CICCC (Canada)",
     generation: "Current",
   },
   {
