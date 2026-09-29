@@ -65,8 +65,8 @@ export default function About() {
   ];
   return (
     <>
-      <header className="flex! flex-col! items-start justify-center text-center">
-        <h1 className="font-semibold">
+      <header className="flex! flex-col! items-center lg:items-start justify-center text-center">
+        <h1 className="font-semibold ">
           About <span>Me</span>
         </h1>
         <p className="pt-0!">Designer, Developer &amp; Lifelong Learner</p>
@@ -92,7 +92,7 @@ export default function About() {
 
         <hr />
 
-        <section className="values py-6.25!">
+        <section className="values px-0! py-6.25!">
           <h2 className="font-semibold">Values &amp; Philosophy</h2>
           <div className="values-container">
             {values.map((value, index) => (
@@ -104,7 +104,7 @@ export default function About() {
                     width={24}
                     height={24}
                   />
-                  {value.title}
+                  <span className="text-left">{value.title}</span>
                 </h3>
                 <p>{value.description}</p>
               </div>
@@ -114,7 +114,7 @@ export default function About() {
 
         <hr />
 
-        <section className="hobbies py-6.25!">
+        <section className="hobbies px-0! py-6.25!">
           <h2 className="font-semibold">Beyond the Screen</h2>
           <div className="hobbies-container">
             {hobbies.map((hobbie, index) => (
@@ -126,7 +126,7 @@ export default function About() {
                     width={24}
                     height={24}
                   />
-                  {hobbie.title}
+                  <span className="text-left">{hobbie.title}</span>
                 </h3>
                 <p>{hobbie.description}</p>
               </div>
