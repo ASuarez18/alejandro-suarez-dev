@@ -12,8 +12,7 @@ import "@/styles/components/Navbar.css";
 
 import logoDev from "@/public/images/icons/logo_dev.svg";
 import profilePic from "@/public/images/portraits/me.jpg";
-import menuIcon from "@/public/images/icons/menu.svg";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const routes = [
   { name: "HOME", path: "/" },
@@ -87,7 +86,7 @@ export const Navbar: React.FC = () => {
         </button>
       </nav>
 
-        <div className={`fixed top-15 w-full h-full z-50 bg-background-color flex flex-col gap-8 items-center justfy-center pt-8! transition-all ease-in duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0"}`}>
+        <div className={`fixed top-15 w-full h-full z-50 bg-background-color flex flex-col gap-8 items-center justfy-center pt-8! transition-all ease-in duration-300 ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
           {routes.map((route) => {
             const isActive =
               route.path === "/"
