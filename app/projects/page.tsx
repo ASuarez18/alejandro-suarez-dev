@@ -3,13 +3,6 @@ import type { Metadata } from "next";
 
 import { getProjects } from "@/lib/projects";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
-import weatherForecastImg from "@/public/images/media/weather-forecat.png";
-import auraArcImg from "@/public/images/media/aura-arc.png";
-import carlaBeautyImg from "@/public/images/media/carla-beauty.png";
-import minimalissimoImg from "@/public/images/media/minimalissimo.png";
-import hungryGuysImg from "@/public/images/media/hungry-guys-kitchen.png";
-import myFirstPageImg from "@/public/images/media/my-first-page.png";
 import openInNewIcon from "@/public/images/icons/open-in-new.svg";
 
 export const metadata: Metadata = {

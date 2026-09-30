@@ -12,8 +12,7 @@ import mailIcon from "@/public/images/icons/mail.svg";
 import phoneIcon from "@/public/images/icons/phone.svg";
 import ContactForm from "@/components/ContactForm";
 
-export const hardSkills: string[] = ["TypeScript", "JavaScript (ES6+)", "Next.js", "Node.js", "Express.js", "Astro", "Tailwind CSS", "PostgreSQL", "Neon Database", "MongoDB", "Prisma ORM", "Contentful CMS", "RESTful APIs", "Git & GitHub", "Docker", "Vercel", "Netlify", "Figma", "HTML5 & CSS3", "Responsive Design", "Data Structures & Algorithms"];
-const softSkills = ["Project Planning", "Prioritization", "Adaptability", "Motivational Leadership", "Active Listening", "Critical Thinking", "Clear Communication", "Team Collaboration", "Time Management", "Problem Solving", "Team Leadership", "Conflict Resolution", "Agile Methodologies", "Emotional Intelligence"]
+import { hardSkills, softSkills } from "@/data/home";
 
 
 export default async function Home() {

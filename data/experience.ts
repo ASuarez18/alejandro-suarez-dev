@@ -29,7 +29,7 @@ export const skillsData = [
   },
   {
     name: "Backend (Node)",
-    percentage: 65,
+    percentage: 80,
   },
   {
     name: "Database (PostgreSQL)",
