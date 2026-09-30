@@ -34,6 +34,11 @@ export const metadata: Metadata = {
   title: "Alejandro Suarez DEV",
   description:
     "Welcome to my personal portfolio website! I'm a passionate Full-Stack Developer specializing in building high-performance web applications and exceptional digital experiences. Explore my projects, experience, and skills as I craft scalable digital solutions with a human-centric approach.",
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+      ]
+    }
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
