@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "Welcome to my personal portfolio website! I'm a passionate Full-Stack Developer specializing in building high-performance web applications and exceptional digital experiences. Explore my projects, experience, and skills as I craft scalable digital solutions with a human-centric approach.",
     icons: {
       icon: [
+        { url: "/favicon.svg", sizes:"32x32" ,type: "image/x-icon" },
         { url: "/favicon.svg", type: "image/svg+xml" },
       ]
     }

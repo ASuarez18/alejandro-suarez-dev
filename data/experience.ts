@@ -41,6 +41,13 @@ export const skillsData = [
   },
 ];
 
+export const technicalSkills = {
+  frontend: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "TypeScript"],
+  backend: ["Node.js", "Express.js", "RESTful APIs"],
+  database: ["PostgreSQL", "MongoDB", "Neon", "Prisma"],
+  tools: ["Git", "GitHub", "Docker", "Vercel", "Postman"],
+}
+
 export const softSkills = [
   "Planning",
   "Agile",
