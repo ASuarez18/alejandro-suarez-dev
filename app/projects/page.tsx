@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     "A collection of web development work ranging from full-stack React applications to high-performance frontend interfaces and responsive designs.",
 };
 
+export const revalidate = 60;
+
 export default async function Projects() {
   const projects = await getProjects();
 
