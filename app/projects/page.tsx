@@ -45,7 +45,7 @@ export default async function Projects() {
                   className="showcase-img"
                 />
                 <div className="project-content">
-                  <ul className="project-keys justify-start!">
+                  <ul className="project-keys justify-start! flex-wrap!">
                     {fields.technologies?.map((tech, i) => (
                       <li key={i}>{tech}</li>
                     ))}
