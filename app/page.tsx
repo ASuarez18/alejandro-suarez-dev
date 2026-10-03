@@ -23,7 +23,7 @@ export default async function Home() {
 
   return (
     <>
-      <header>
+      <header className="pt-10!">
         <div>
           <div className="available-work">
             <span className="heartbeat">•</span> Available to work
@@ -160,8 +160,8 @@ export default async function Home() {
                     />
                   )}
                   <div className="project-content">
-                    <ul className="project-keys">
-                      {fields.technologies?.map((tech, i) => (
+                    <ul className="project-keys flex-wrap! justify-center">
+                      {fields.technologies?.slice(0, 3).map((tech, i) => (
                         <li key={i}>{tech}</li>
                       ))}
                     </ul>
